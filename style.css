@@ -1,0 +1,540 @@
+body{
+    margin-top: 10px;
+    background-color: #e9e9f0;
+}
+.container{
+    box-shadow: 0 0 10px #b1b1c7 !important;
+    height: 1000px;
+    margin-top: 50px;
+}
+
+.form{
+    margin-top: 50px;
+    height: 500px;
+    background-color: #2f3466;
+    padding-top: 50px;
+}
+
+.guide{
+    margin-top: 20px;
+    text-align: center;
+    color: gray;
+    margin-bottom: 40px;
+}
+
+.form input{
+    background-color: transparent;
+    color: whitesmoke;
+    display: block;
+    margin: 30px auto;
+    border: none;
+    border-bottom: 2px solid whitesmoke;
+    width: 300px;
+    font-size: 14pt;
+}
+
+.heading2{
+    color: whitesmoke;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.form button{
+    background-color: transparent;
+    color: whitesmoke;
+    font-size: 14pt;
+    padding: 5px;
+    border: 1px solid whitesmoke;
+    border-radius: 30px;
+    width: 300px;
+    display: block;
+    margin: 20px auto;
+}
+
+.heading{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30pt;
+    font-family: 'Kanit', sans-serif;
+}
+
+.inputDiv{
+    padding: 10px;
+    padding-left: 40px;
+    margin-bottom: 30px;
+}
+
+#workPlan{
+    width: 45%;
+    margin-right: 20px;
+    height: 40px;
+    background-color: #2f3466;
+    border: none;
+    border-bottom: 2px solid whitesmoke;
+    color: whitesmoke;
+    padding: 10px;
+    font-size: 16pt;
+}
+
+#workPlan::placeholder{
+    color: silver;
+}
+
+#timePicker{
+    width: 15%;
+    height: 39px;
+    background-color: #2f3466;
+    border: none;
+    border-bottom: 2px solid whitesmoke;
+    color: whitesmoke;
+    padding: 10px;
+    font-size: 16pt;
+    text-align: center;
+}
+
+#timePicker::-webkit-calendar-picker-indicator{
+    background-color: whitesmoke;
+    font-size: 12pt;
+}
+
+.inputRow{
+    background-color: #2f3466;
+    color: whitesmoke;
+}
+
+button:focus{
+    outline: none !important;
+}
+
+.insertBtn{
+    margin-left: 10px;
+    width: 10%;
+    height: 40px;
+    background-color: #2f3466;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    color: whitesmoke;
+    font-size: 14pt; 
+}
+
+.logout{
+    margin-left: 5px;
+    width: 10%;
+    height: 40px;
+    background-color: #2f3466;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    color: whitesmoke;
+    font-size: 14pt;
+}
+
+.deleteAllBtn{
+    margin-left: 5px;
+    width: 12%;
+    height: 40px;
+    background-color: #2f3466;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    color: whitesmoke;
+    font-size: 14pt; 
+}
+
+button{
+    cursor: pointer;
+}
+
+#alertMsg, #alertMsgForNoAccount, #alertMsgForAlreadyAccount{
+    border: 5px solid sienna;
+}
+
+#signInAccount{
+    border: 5px solid green;
+}
+
+.planClass{
+    height: 770px;
+    border: 5px solid #2f3466;
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: #dddeed;
+    color: #2f3466;
+}
+
+#orderList{
+    margin: 20px auto;
+}
+
+#Work{
+    text-align: center !important;
+    width: 100% !important;
+    font-size: 22pt !important;
+    font-weight: 600 !important;
+    padding: 10px !important;
+}
+
+#orderList li p{
+    display: inline-block;
+    font-size: 18pt;
+    width: 35%;
+    text-align: center;
+    color: whitesmoke;
+    padding-left: 20px;
+    font-weight: 500;
+    line-height: 55px;
+}
+
+#orderList li{
+    font-size: 18pt;
+    color: #2f3466;
+    border: 2px solid whitesmoke;
+    background-color: #5c629e;
+    height: 60px;
+}
+
+.hide{
+    display: none;
+}
+
+.editBtnFunc, .deleteBtnFunc{
+    width: 10%;
+    background-color: #5c629e;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    margin-right: 5px;
+    font-size: 14pt;
+    padding: auto;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .container{
+        height: 880px;
+    }
+
+    .form{
+        height: 500px;
+    }
+
+    .planClass{
+        height:650px;
+    }
+
+    .heading{
+        font-size: 26pt;
+    }
+
+    #workPlan{
+        width: 35%;
+        margin-left: -30px;
+    }
+    
+    #timePicker{
+        width: 20%;
+    }
+        
+    .insertBtn{
+        margin-left: 10px;
+        width: 15%;
+        font-size: 12pt; 
+    }
+    
+    .deleteAllBtn{
+        margin-left: 5px;
+        width: 15%;
+        font-size: 12pt; 
+    }
+
+    .logout{
+        margin-left: 5px;
+        width: 10%;
+        font-size: 12pt;
+    }
+
+    #alertMsg{
+        font-size: 16pt;
+    }
+    
+    #orderList{
+        margin: 15px auto;
+    }
+    
+    #Work{
+        width: 100% !important;
+        font-size: 20pt !important;
+    }
+    
+    #orderList li p{
+        font-size: 12pt;
+        line-height: 45px;
+    }
+    
+    #orderList li{
+        height: 50px;
+    }
+    
+    .editBtnFunc, .deleteBtnFunc{
+        margin-top: 7px;
+        width: 12%;
+        font-size: 12pt;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container{
+        height: 880px;
+    }
+
+    .form{
+        height: 500px;
+    }
+
+    .planClass{
+        height:650px;
+    }
+
+    .heading{
+        font-size: 22pt;
+    }
+
+    #workPlan{
+        width: 60%;
+        font-size: 12pt;
+        margin-left: -10px;
+    }
+    
+    #timePicker{
+        margin-left: -15px;
+        width: 35%;
+        font-size: 12pt;
+    }
+        
+    .insertBtn{
+        margin-left: 50px;
+        margin-top: 20px;
+        height: 35px;
+        font-size: 14pt;
+        width: 20%; 
+    }
+    
+    .deleteAllBtn{
+        height: 35px;
+        font-size: 14pt;
+        width: 25%; 
+        margin-left: 10px; 
+    }
+
+    .logout{
+        height: 35px;
+        font-size: 14pt;
+        width: 20%; 
+        margin-left: 10px; 
+    }
+
+    #alertMsg{
+        font-size: 12pt;
+        height: 60px;
+        line-height: 25px;
+    }
+
+    #Work{
+        margin-top: 20px;
+        width: 100% !important;
+        font-size: 16pt !important;
+    }
+    
+    .editBtnFunc.deleteBtnFunc{
+        width: 10%;
+    }
+
+    .deleteBtnFunc{
+        width: 15%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container{
+        width: 80%;
+    }
+
+    .guide{
+        font-size: 14pt;
+    }
+    
+    .form input{
+        width: 250px;
+        font-size: 12pt;
+    }
+    
+    .heading2{
+        font-size: 22pt;
+    }
+    
+    .form button{
+        font-size: 12pt;
+        width: 250px;
+    }
+
+    .heading{
+        font-size: 22pt;
+    }
+
+    #workPlan{
+        width: 60%;
+        margin-left: 0px;
+        font-size: 12pt;
+    }
+    
+    #timePicker{
+        width: 30%;
+        font-size: 12pt;
+    }
+        
+    .insertBtn{
+        margin-left: 10px;
+        width: 25%;
+        font-size: 12pt; 
+    }
+    
+    .deleteAllBtn{
+        margin-left: 5px;
+        width: 30%;
+        font-size: 12pt; 
+    }
+
+    .logout{
+        width: 25%;
+        margin-left: 5px;
+        font-size: 12pt;
+    }
+
+    #alertMsg{
+        font-size: 9pt;
+    }
+    
+    #Work{
+        font-size: 18pt !important;
+    }
+    
+    #orderList li p{
+        font-size: 10pt;
+    }
+    
+    #orderList li{
+        height: 50px;   
+    }
+    
+    .editBtnFunc{
+        margin-left: -20px;
+        width: 12%;
+        font-size: 10pt;
+    }
+
+    .deleteBtnFunc{
+        width: 18%;
+        font-size: 10pt;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .container{
+        width: 90%;
+        height: 800px;
+    }
+
+    .form{
+        height: 500px;
+    }
+    
+    .guide{
+        font-size: 12pt;
+    }
+    
+    .form input{
+        width: 200px;
+        font-size: 12pt;
+    }
+    
+    .heading2{
+        font-size: 20pt;
+    }
+    
+    .form button{
+        font-size: 12pt;
+        width: 200px;
+    }
+
+    .planClass{
+        height:550px;
+    }
+    
+    .heading{
+        font-size: 20pt;
+    }
+
+    #workPlan{
+        width: 55%;
+        margin-left: -10px;
+        font-size: 12pt;
+        margin-bottom: 20px;
+    }
+    
+    #timePicker{
+        width: 35%;
+        font-size: 12pt;
+    }
+        
+    .insertBtn{
+        margin-left: 0px;
+        margin-top: 0px;
+        width: 30%;
+        font-size: 10pt;
+    }
+    
+    .deleteAllBtn{
+        margin-left: 2px;
+        margin-top: 40px;
+        width: 30%;
+        font-size: 10pt; 
+    }
+
+    .logout{
+        margin-left: 2px;
+        margin-top: 40px;
+        width: 25%;
+        font-size: 10pt; 
+    }
+
+    #alertMsg{
+        font-size: 10pt;
+        line-height: 20px;
+        height: 80px;
+    }
+    
+    #Work{
+        font-size: 18pt !important;
+    }
+    
+    #orderList li p{
+        font-size: 10pt;
+        line-height: 50px;
+        margin-top: -30px;
+    }
+    
+    #orderList li{
+        height: 40px;
+        width: 280px;
+        margin-left: -30px;
+        font-size: 12pt;
+    }
+    
+    .editBtnFunc{
+        margin-left: -10px;
+        width: 12%;
+        font-size: 10pt;
+    }
+
+    .deleteBtnFunc{
+        width: 18%;
+        font-size: 10pt;
+    }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Todo App</title>
+
+    <!-- CSS and bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Firebase Database --><!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyDTTo3zOJQoNVYSsQdMhJNyJvZybnGnEJo",
+        authDomain: "todo-work-planner.firebaseapp.com",
+        databaseURL: "https://todo-work-planner.firebaseio.com",
+        projectId: "todo-work-planner",
+        storageBucket: "todo-work-planner.appspot.com",
+        messagingSenderId: "212945741180",
+        appId: "1:212945741180:web:1999060ce1addd562530f9",
+        measurementId: "G-6T6LXQB89X"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
+    
+</head>
+<body>
+
+    <div  id="topForm" class="container form">
+        <h2 class="heading2">TODO WORK PLANNER</h2>
+        <h4 class="guide">Create a new account or login if you have an account</h4>
+        <div>
+            <input type="text" id="email" placeholder="email">
+            <input type="password" id="pswd" placeholder="password">
+            <button onclick="logIn()" id="login">Login</button>
+            <button onclick="signUp()" id="createAccount">Create an account</button>
+        </div>
+        <div id="alertMsgForNoAccount" class="hide mt-3 col-lg-12 col-md-12 col-sm-12 alert alert-danger">
+            <a href="#" class="close" onclick="alertUnhide()" aria-label="close">&times;</a>
+            <strong>Danger!</strong> Email address or password may be incorrect.
+        </div>
+        <div id="alertMsgForAlreadyAccount" class="hide mt-3 col-lg-12 col-md-12 col-sm-12 alert alert-danger">
+            <a href="#" class="close" onclick="alertUnhide()" aria-label="close">&times;</a>
+            <strong>Danger!</strong> This email address is already in use by another account.
+        </div>
+    </div>
+
+    
+    <div id="signInAccount" class="hide mt-3 col-lg-12 col-md-12 col-sm-12 alert alert-success">
+        <a href="#" class="close" onclick="alertUnhide()" aria-label="close">&times;</a>
+        <strong>Danger!</strong> This email address is already in use by another account.
+    </div>
+    
+    <div id="objectDiv" class="container hide">
+        <div class="row inputRow">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <h2 class="heading">TODO WORK PLANNER</h2>
+            </div>
+        </div>
+        <div class="row inputRow">
+            <div class="col-lg-12 col-md-12 col-sm-12 inputDiv">
+                <input type="text" name="workPlan" id="workPlan" placeholder="Add your work plans ....">
+                <input type="time" name="time" id="timePicker">
+                <button class="insertBtn" onclick="insertData()">Add Plan</button>
+                <button class="deleteAllBtn" onclick="deleteAllRecords()">Delete All</button>
+                <button class="logout" onclick="logOut()" id="logout">Logout</button>
+          </div>
+        </div>
+        <div id="alertMsg" class="hide mt-3 col-lg-12 col-md-12 col-sm-12 alert alert-danger">
+            <a href="#" class="close" onclick="alertUnhide()" aria-label="close">&times;</a>
+            <strong>Danger!</strong> You can not add data if Work plan or Time is empty
+        </div>
+        <div id="planCls" class="row planClass">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <p id="Work">PLANS TO DO LATER</p>
+                <ol id="orderList"></ol>
+            </div>
+        </div>
+      </div>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</html>
